@@ -1,0 +1,31 @@
+# Stock-Prediction-Models dependencies
+# Env: Python 3.6 + TensorFlow 1.x
+# Code uses TF 1.x APIs (tf.contrib / tf.placeholder / dynamic_rnn), removed in TF 2.x
+#
+# Install: <your-python> -m pip install -r requirements.txt
+
+# ===== Core: deep learning framework (must pin to 1.x; tf.contrib removed in TF 2.x) =====
+tensorflow==1.15.0
+
+# ===== Data processing & scientific computing =====
+numpy<1.19.0          # TF 1.15 incompatible with numpy>=1.19, pin below 1.19
+scipy
+pandas
+scikit-learn          # MinMaxScaler normalization
+
+# ===== Visualization =====
+matplotlib
+seaborn
+
+# ===== Utilities =====
+tqdm                  # training progress bar
+
+# ===== stacking/ ensemble models =====
+xgboost
+statsmodels           # ARIMA
+
+# ===== realtime-agent/ Flask service =====
+flask
+
+# ===== Optional: DNC (deep-learning/dnc.py etc.; not used by the 20 notebooks) =====
+# dm-sonnet==1.0       # enable only if you run dnc.py / access.py / addressing.py
